@@ -1,0 +1,310 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== Header / Navbar ===== */
+.site-header {
+  background-color: #000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background-color: #111;
+  outline: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out forwards;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.85);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(243, 156, 18, 0.4);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(230, 126, 34, 0.6);
+  outline: none;
+}
+
+/* ===== Separation Divider ===== */
+.separation {
+  height: 50px;
+  background: linear-gradient(to right, #f39c12, #e67e22);
+  position: relative;
+  z-index: 3;
+}
+
+/* Hero Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Container */
+.site-footer {
+  /* background-color: #2c3e50; Dark blue-gray background */
+  color: #ecf0f1;            /* Light text */
+  padding: 4rem 2rem;        /* Spacious padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;              /* Full width so bg color covers whole footer */
+  /* border-top: 4px solid #f39c12; Optional accent top border */
+}
+
+/* Each Column */
+.footer-column {
+  flex: 1 1 30%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+
+.newsletter-input {
+  display: flex;
+  margin-top: 1rem;
+  max-width: 250px;
+}
+
+.newsletter-input input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletter-input button {
+  padding: 0.5rem 1rem;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* Footer bottom area with copyright and links */
+.footer-bottom {
+  width: 100%;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #34495e;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #95a5a6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #95a5a6;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f39c12;
+}
+
+/* Responsive: stack columns vertically on small screens */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .footer-column {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-input {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hero content adjustments */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

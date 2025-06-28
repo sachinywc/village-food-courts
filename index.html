@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Village Food Courts | FOOD + ENTERTAINMENT DESTINATION</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/universal/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="/assets/universal/logo.jpg"
+            alt="Village Food Courts logo"
+          />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="/assets/home/bg.MP4" type="video/mp4" />
+      </video>
+      <div class="hero-content">
+        <h1>Food + Entertainment</h1>
+        <p>Experience the best F&B options, live music, and VR arcade fun.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+      </div>
+    </section>
+
+    <div class="separation"></div>
+
+    <div id="menu-section"></div>
+    <div id="gallery-section"></div>
+    <div id="contact-section"></div>
+
+    <footer class="site-footer">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hours</h4>
+        <p>
+          Mon–Thu: <strong>5:00 PM – 10:00 PM</strong><br />
+          Fri–Sat: <strong>5:00 PM – 11:00 PM</strong><br />
+          Sunday: <strong>5:00 PM – 9:00 PM</strong>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Newsletter</h4>
+        <p>Subscribe to our newsletter for special events and promotions.</p>
+        <form class="newsletter-input">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2025 La Maison. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.toggle("show");
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
